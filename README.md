@@ -34,6 +34,7 @@ As noted before, I didn't have time to write up tests, and I know that I missed 
 
 Improvements:
 * Written up tests.
+* Host the client on a live server.
 * Follow-up on foreign character encoding. There appears to be an encoding issue with some characters.
 
 I also would have collaborated with the appropriate parties (other engineers, PMs, UI/UX designers, etc) on the following:
