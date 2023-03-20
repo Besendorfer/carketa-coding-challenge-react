@@ -1,0 +1,17 @@
+.RepresentativeInfo__container {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.RepresentativeInfo__container__infoGroup__row {
+  background-color: #F4F4F5;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  min-width: 525px;
+}
+
+.empty {
+  color: #BBBBBB;
+}

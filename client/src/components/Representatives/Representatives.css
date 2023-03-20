@@ -1,0 +1,25 @@
+.Representatives__container {
+  margin: 20px;
+}
+
+.Representatives__container__title {
+  color: #00A6ED;
+  text-align: start;
+}
+
+.Representatives__container__hr {
+  border-color: #F0F0F0;
+}
+
+.Representatives__container__form {
+  margin-bottom: 10px;
+}
+
+.Representatives__container__directory {
+  display: flex;
+}
+
+h2 {
+  font-weight: 300;
+  text-align: start;
+}

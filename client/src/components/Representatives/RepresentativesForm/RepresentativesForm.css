@@ -1,0 +1,8 @@
+.RepresentativesForm__container {
+  display: flex;
+}
+
+.RepresentativesForm__container__selector {
+  margin-right: 10px!important;
+  min-width: 80px!important;
+}

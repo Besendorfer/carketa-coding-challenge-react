@@ -1,0 +1,20 @@
+.RepresentativesList__container {
+  padding-right: 30px;
+}
+
+.RepresentativesList__container__list__row--empty {
+  display: flex;
+  margin: 5px;
+}
+
+.RepresentativesList__container__list__row__cell--name {
+  min-width: 250px;
+}
+
+.RepresentativesList__container__list__row__head {
+  background-color: #F8F8F9;
+}
+
+.current {
+  background-color: aliceblue;
+}
