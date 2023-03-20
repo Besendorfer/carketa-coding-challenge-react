@@ -1,128 +1,44 @@
-# Front End Challenge
-For this programming test you are tasked with creating an interface around 
-the open API located at http://whoismyrepresentative.com/api. 
-However, to get around CORs limitation, we are providing an extremely simple node application 
-that will act as a layer between your client app and the API.  If you want to and can get around the CORs limitation, 
-feel free to ignore the node server.  If you don't want the hassle, you can follow the instructions 
-below to get everything up and running. If you do, you will be using the node app as your API - you will not be accessing whoismyrepresentative.com directly from your client side app
+# Carketa Coding Challenge - React
 
-In your client side application, you will be making use of two of the endpoints that are offered: 
+Again, thanks for this challenge as well! It was quite fun to do. I didn't have as much time to complete this challenge, so I didn't have a chance to add much bonus work. This should be a completion of the main points of the challenge.
 
-* /representatives/:state
-* /senators/:state
+## Installation and Running
 
-Your application should allow the user to: 
+This was done on Node.js version 18.13.0. YMMV if you use a different version.
 
-* Select if he/she would like to search by Representative or by Senator
-* Select which state to return results for
-* View a results list after #1 and #2 have been selected
-* Display name and party affiliation
-* View more information about the representative/senator by clicking on his/her name in the results list (district,  phone, office and a link to his/her website)
+There are a few extra steps for installation, and later for running, since we have both a server and a client.
 
-Your website should be built using React and match the following design.
-Feel free to use whatever libraries you want to make the design fit.
+### Server
 
-Priorities: 
+These two commands should install the necessary packages, then start the server on `http://localhost:3000`. These should be run from the root of the project.
 
-1) Functionality
-2) Design
-3) Code organization
-4) Proper error handling (make sure they select something before clicking on the button to fetch results)
+```
+npm install
 
-If you have any questions, please let us know. 
-
-![Example layout](example.png)
-
-
-# find-rep-api
-Super simple api to get results from http://whoismyrepresentative.com/api
-
-#Installation
-
-* Install node (v6+)
-* Run `npm install` or `yarn`
-* Run `npm start`
-* Enjoy immensely.
-
-###Available endpoints: 
-
-`/representatives/:state`
-
-_:state_ must be a valid state abbreviation (UT, WY, MO...etc)
-
-**response**
-```json
-{  
-   "success":true,
-   "results":[  
-      {  
-         "name":"Rob Bishop",
-         "party":"R",
-         "state":"UT",
-         "district":"1",
-         "phone":"202-225-0453",
-         "office":"123 Cannon House Office Building",
-         "link":"http://robbishop.house.gov"
-      },
-      {  
-         "name":"Jason Chaffetz",
-         "party":"R",
-         "state":"UT",
-         "district":"3",
-         "phone":"202-225-7751",
-         "office":"2464 Rayburn House Office Building",
-         "link":"http://chaffetz.house.gov"
-      },
-      {  
-         "name":"Jim Matheson",
-         "party":"D",
-         "state":"UT",
-         "district":"4",
-         "phone":"202-225-3011",
-         "office":"2211 Rayburn House Office Building",
-         "link":"http://matheson.house.gov"
-      },
-      {  
-         "name":"Chris Stewart",
-         "party":"R",
-         "state":"UT",
-         "district":"2",
-         "phone":"202-225-9730",
-         "office":"323 Cannon House Office Building",
-         "link":"http://stewart.house.gov"
-      }
-   ]
-}
+npm run start
 ```
 
-`/senators/:state`
+### Client
 
-_:state_ must be a valid state abbreviation (UT, WY, MO...etc)
+These two commands should do the same thing. They install the necessary packages, then start the client running on `http://localhost:3001`. These commands should be run from the `client/` folder.
 
-**response**
-```json
-{  
-   "success":true,
-   "results":[  
-      {  
-         "name":"Orrin Hatch",
-         "party":"R",
-         "state":"UT",
-         "district":"Senior Seat",
-         "phone":"202-224-5251",
-         "office":"104 Hart Senate Office Building",
-         "link":"http://www.hatch.senate.gov"
-      },
-      {  
-         "name":"Mike Lee",
-         "party":"R",
-         "state":"UT",
-         "district":"Junior Seat",
-         "phone":"202-224-5444",
-         "office":"316 Hart Senate Office Building",
-         "link":"http://www.lee.senate.gov"
-      }
-   ]
-}
+```
+npm install
+
+npm run start
 ```
 
+## Notes
+
+As noted before, I didn't have time to write up tests, and I know that I missed a couple of things that I would want to finish up, were this an actual task/project. Here are a few things I noticed that I would have finished.
+
+Improvements:
+* Written up tests.
+* Follow-up on foreign character encoding. There appears to be an encoding issue with some characters.
+
+I also would have collaborated with the appropriate parties (other engineers, PMs, UI/UX designers, etc) on the following:
+* What should we do with the District information row when selecting Senators? Not display it, or some text explaining it isn't available?
+* Preference between a submit button or no submit button. It isn't necessary, but it can help users with error states.
+* Zero/empty states? What do we show the users when the form isn't complete yet?
+* Best way to determine First Name and Last Name? In at least one case, there is a Representative that has three names.
+* What do we do when the Representatives table gets really long? Do we paginate, or do we have the Info section follow the user as they scroll? Something else?
